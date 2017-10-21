@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return (
 
-    <div style={{backgroundColor: "#6bcbff"}}>
+    <div style={{backgroundColor: "#e8ff6a"}}>
     	<div className="navbar-fixed">
 		    <nav className="orange z-depth-5">
 			    <div className="nav-wrapper container">
@@ -17,18 +17,14 @@ class App extends Component {
 		  	</nav>
 	  	</div>
 
-	      <h1 className='blue-text text-darken-2'>ProtoPhoto fxaaaaaaaaaafffffffffffffgggggggggggggggggggggggg
-	      ggggggggggggggggggggggggggggggggggggggggggggggg
-	      hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-	      jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-	      rrrrrrrrrrrrrrrrrrrrrrrrrrr
-	      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-	      qqqqqqqqqqqqqqqqqqq
-	      oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-	      oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-	      oooooooooooooooooooooooo</h1>
+	  	<h1 className='blue-text text-darken-2 center'>ProtoPhoto</h1>
 
-	      <input type='file' />
+		<div className="row">
+			<div className="col s12"><span className="flow-text">
+				<input type='file' />
+				</span>
+			</div>
+	    </div>
     </div>
     )
   }
