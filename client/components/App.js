@@ -20,9 +20,8 @@ class App extends Component {
 	  	<h1 className='blue-text text-darken-2 center'>ProtoPhoto</h1>
 
 		<div className="row">
-			<div className="col s12"><span className="flow-text">
+			<div class="col s12 m6 l3">
 				<input type='file' />
-				</span>
 			</div>
 	    </div>
     </div>
