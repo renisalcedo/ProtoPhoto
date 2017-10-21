@@ -1,10 +1,90 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>ProtoPhoto</title>
+  <style type="text/css">
+    
+  body{
+    background-color: #cbd0d8;
+    text-align: center;
+    color:;
+  }
+  li{
+    float: right;
+  }
+
+
+  </style>
+  
 </head>
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+
 <body>
   <div id="app"></div>
+  <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            
+            
+          </button>
+
+          <a class="navbar-brand" href="#">ProtoPhoto</a>
+        </div>
+        <div id="container">
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="active"><a href="#">Home </a></li>
+            <li><a href="#about"> About </a></li>
+            <li><a href="#contact"> Contact </a></li>
+          </ul>
+        </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview..."><br><br>
+ <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+
+	</form>
+   
 </body>
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+           
+            </div>
+          </div>
+        </footer>
+
 </html>
