@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 
+import Generate from './Generate';
+
 class App extends Component {
   render() {
     return (
@@ -14,6 +16,8 @@ class App extends Component {
 				<input type='file' />
 			</div>
 	    </div>
+
+      <Generate />
     </div>
     )
   }

@@ -9,7 +9,7 @@ const colors = (fileName) => {
   .then((results) => {
     const properties = results[0].imagePropertiesAnnotation;
     const colors = properties.dominantColors.colors;
-    return colors.forEach((color) => color);
+    return colors;
   })
   .catch((err) => {
     console.error('ERROR:', err);
