@@ -4,8 +4,26 @@ import axios from 'axios';
 class Generate extends Component {
   render() {
     return (
-      <h1>Hi</h1>
+      <ul>
+        {this.textRender()}
+      </ul>
     )
+  }
+
+  textRender() {
+    const fullText = axios.get('http://localhost:3000/fullText')
+      .then((res) => {
+        const data = res.data.fullTextAnnotation.pages[0].blocks[0].paragraphs[0].words[0].symbols;
+        console.log(data);
+
+      return data.map((text, index) => {
+        let main = main+text.text;
+
+        return (
+          <li key={index}>{main}</li>
+        )
+      })
+    })
   }
 };
 

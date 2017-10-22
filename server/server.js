@@ -1,5 +1,5 @@
 const express = require('express');
-const { fullTextData, colorData } = require('./data/vision.js');
+const { fullTextData, colorData, cropsHintsData, labelsData } = require('./data/vision.js');
 
 // Path to file
 const fileName = './server/sample2.png';
@@ -7,6 +7,8 @@ const fileName = './server/sample2.png';
 // Data to be returned for website
 const fullText = fullTextData(fileName);
 const colors   = colorData(fileName);
+const cropsHints = cropsHintsData(fileName);
+const labels = labelsData(fileName);
 
 const app = express();
 
@@ -16,4 +18,4 @@ const webpackConfig = require('../webpack.config.js');
 
 app.use(webpackMiddleware(webpack(webpackConfig)));
 
-module.exports = {app, fullText, colors};
+module.exports = { app, fullText, colors, cropsHints, labels };
