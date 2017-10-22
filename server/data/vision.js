@@ -7,5 +7,9 @@ const vision = Vision();
 const fullTextData = require('./fullText');
 // PAGE COLORS WITH DATA
 const colorData = require('./colorData');
+// Crops hints
+const cropsHintsData = require('./cropsHints');
+// Label detections
+const labelsData = require('./labels.js');
 
-module.exports = { fullTextData, colorData };
+module.exports = { fullTextData, colorData, cropsHintsData, labelsData };
