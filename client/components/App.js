@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Input from './Input';
 import Footer from './Footer';
+import Generate from './Generate.js';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
 		  	<br />
 	        <Input/>
 
+          <Generate />
     		<Footer />
     </div>
     )
