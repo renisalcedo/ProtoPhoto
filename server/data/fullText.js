@@ -7,7 +7,7 @@ const vision = Vision();
 const fullTextAnnotation = (fileName) => {
   return vision.documentTextDetection({ source: { filename: fileName } })
   .then((results) => {
-    return results[0].fullTextAnnotation.pages[0];
+    return results[0];
       console.log("DOCUMENT: ", fullTextAnnotation);
     })
   .catch((err) => {
